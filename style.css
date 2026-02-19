@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f3ebe2;
+    color: #3e2c23;
+}
+
+/* ===== HEADER ===== */
+header {
+    position: relative;
+    height: 85vh;
+    background: linear-gradient(rgba(60,35,25,0.7), rgba(60,35,25,0.7)),
+                url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.header-content {
+    z-index: 2;
+}
+
+.logo {
+    width: 130px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #e6d3c2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    color: #e6d3c2;
+    font-size: 1.1rem;
+}
+
+/* ===== SECTIONS ===== */
+.section {
+    padding: 60px 8%;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 3px;
+    background: #5c3b2e;
+    display: block;
+    margin: 10px auto;
+    border-radius: 3px;
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff8f1;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.card:hover {
+    background: #5c3b2e;
+    color: white;
+    transform: translateY(-5px);
+}
+
+/* ===== CONTACT ===== */
+.contact-box {
+    background: #222222;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.07);
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+/* ===== FEEDBACK ===== */
+.feedback textarea {
+    width: 100%;
+    height: 120px;
+    border-radius: 12px;
+    border: 1px solid #d6c2b2;
+    padding: 15px;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 15px;
+    background: #fff;
+}
+
+.feedback button {
+    background: #5c3b2e;
+    color: white;
+    border: none;
+    padding: 12px 35px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feedback button:hover {
+    background: #3e2c23;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #222222
+;
+    color: #e6d3c2;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    header {
+        height: 60vh;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        padding: 40px 5%;
+    }
+}
+
+
+/* ===== SUB HEADER ===== */
+.sub-header {
+    height: 45vh;
+    background-image: 
+        linear-gradient(rgba(60,35,25,0.6), rgba(60,35,25,0.6)),
+        var(--bg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+
+.sub-header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sub-header h1 {
+    font-size: 1.8rem;
+}
+
+.back-btn {
+    background: #e6d3c2;
+    color:  #D4AF37;
+;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: white;
+}
+
+/* ===== MENU GRID ===== */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+/* ===== MENU CARD ===== */
+.menu-card {
+    background: #222222
+;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+}
+
+.menu-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.menu-info .desc {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #6b4f42;
+}
+
+.menu-info .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    background:  #B8902E;
+
+    color: white;
+    display: inline-block;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:768px){
+    .sub-header-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.whatsapp-btn {
+    display: inline-block;
+    background: #D4AF37; /* ذهبي كلاسيك */
+    color: #1C1A17;
+    padding: 14px 35px;
+    border-radius: 40px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.whatsapp-btn:hover {
+    background: #1C1A17;
+    color: #D4AF37;
+    transform: translateY(-4px);
+}
